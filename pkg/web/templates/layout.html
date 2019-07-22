@@ -1,0 +1,29 @@
+{{define "layout"}}
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Dosa Diner</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../pkg/web/assets/css/style.css">
+    <link rel="stylesheet" href="../pkg/web/assets/css/bulma-divider.css">
+    <link rel="stylesheet" href="../pkg/web/assets/css/bulma-checkradio.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <!-- Bulma Version 0.7.1-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+  </head>
+  <body>
+      <section class="hero is-success is-fullheight">
+          <div class="hero-body">
+                  <div class="container has-text-centered">
+                          <div class="column is-7 is-offset-3">
+                              {{template "body" .}}
+                          </div>
+                  </div>
+          </div>
+      </section>
+  </body>
+</html>
+{{end}}

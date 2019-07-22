@@ -1,0 +1,101 @@
+{{define "title"}}contact{{end}}
+
+{{define "body"}}
+
+<section class="section">
+    <h1>CONTACT FORM</h1>
+    <form method="POST" action="/app">
+      <div class="is-divider"></div>
+        <div class="field is-horizontal">
+            <div class="field-label">
+              <label class="label">FIRSTNAME *</label>
+            </div>
+            <div class="is-divider-v"></div>
+
+            <div class="field-body">
+              <div class="field">
+                <p class="control">
+                  <input type="text" class="input" name="fname">
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="is-divider"></div>
+            <div class="field is-horizontal">
+            <div class="field-label">
+              <label class="label">LASTNAME *</label>
+            </div>
+            <div class="is-divider-v"></div>
+
+            <div class="field-body">
+              <div class="field">
+                <p class="control">
+                  <input type="text" class="input" name="lname">
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="is-divider"></div>
+          <div class="field is-horizontal">   
+            <div class="field-label">
+                <label class="label">EMAIL *</label>
+              </div>
+              <div class="is-divider-v"></div>
+
+              <div class="field-body">
+                <div class="field">
+                  <p class="control">
+                    <input type="text" class="input" name="email">
+                  </p>
+                </div>
+              </div>
+          </div>
+          <div class="is-divider"></div>
+          <div class="field is-horizontal">   
+              <div class="field-label">
+                  <label class="label">AFFILIATION *</label>
+                </div>
+                <div class="is-divider-v"></div>
+
+                <div class="field-body">
+                    <div class="field">
+                      <p class="control">
+                          <div class="select is-medium is-dark">
+                            <select name="afln">
+                                <option value="" disabled selected>Choose an option</option>
+                                {{range .Names}}
+                                  <option value="{{.}}"> {{.}}</option>
+                                {{end}}
+                              </select>
+                          </div>
+                       </p>
+                    </div>
+                  </div>
+            </div>
+            <div class="is-divider"></div>
+ 
+              <div class="contact-submit">
+                <label for="mySubmit" class="btn" style="cursor: pointer;">SEND  &nbsp <i class="fa fa-paper-plane" aria-hidden="true" style="font-size:30px; cursor: pointer;"></i>
+                <input id="mySubmit" type="submit" value="" class="hidden">
+              </div>
+            </form>
+</section>
+
+<script>
+  var dropdown = document.querySelector('.dropdown');
+  dropdown.addEventListener('click', function(event) {
+  event.stopPropagation();
+  dropdown.classList.toggle('is-active');
+});
+</script>
+    <!-- <div class="field">
+        <label class="checkbox">
+          <input type="checkbox">
+              Remember me
+        </label>
+    </div> -->
+    <!-- <button class="button is-block is-info is-large is-fullwidth">Login</button> -->
+
+{{end}}

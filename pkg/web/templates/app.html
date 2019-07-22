@@ -1,0 +1,92 @@
+{{define "title"}}SC-app{{end}}
+{{define "body"}}
+
+<section>
+    <div class="container is-fluid">
+        <h1>Smart Consent Platform</h1>
+        <div class="is-divider"></div>
+        <form action="/consent" method="POST">
+        {{ range $i, $v := .}}
+        <div class="box">
+                <article class="media">
+                        <figure class="media-left">
+                          <p class="image is-64x64">
+                            <img src="https://www.itu.int/en/history/ImagesITUlogo/2011-ITU-logo-official.png">
+                          </p>
+                        </figure>
+                        <div class="media-content">
+                            <div class="content">
+                                <p>
+                                  <strong>{{$v.Lead}}</strong> <small>{{$v.Id}}</small> <!-- <small>12/07/2018</small> -->
+                                  <br>
+                                  {{$v.Corpus}}
+                                </p>
+                            </div>
+                          {{if $v.OptsModel.Text}}
+                          <div class="field">
+                            <p class="control">
+                              <textarea class="textarea" name="{{$v.Id}}" placeholder="Add a comment..."></textarea>
+                            </p>
+                          </div>
+                          {{end}}
+
+                          {{if $v.OptsModel.Radio}}
+                          <nav class="level">
+                            <div class="level-left">
+                              <div class="level-item">
+                                <span> &nbsp</span>
+                              </div>
+                            </div>
+                            <div class="level-right">
+                              <div class="level-item">
+                                  <!-- <div class="field">
+                                      <input class="is-checkradio" id="exampleRadioInline{{$i}}" type="radio" name="exampleRadioInline" checked="checked">
+                                      <label for="exampleRadioInline{{$i}}">Option 1</label>
+                                      <input class="is-checkradio" id="exampleRadioInline2" type="radio" name="exampleRadioInline">
+                                      <label for="exampleRadioInline2">Option 2</label>
+                                  </div> -->
+                                <div class="field">
+                                  <input class="is-checkradio is-danger" id="{{$v.Id}}-FALSE" type="radio" value="rejected" name="{{$v.Id}}">
+                                  <label class="label-checkbox" for="{{$v.Id}}-FALSE">Rejected</label>
+                                  <input class="is-checkradio is-success" id="{{$v.Id}}-TRUE" type="radio" value="accepted" name="{{$v.Id}}">
+                                  <label class="label-checkbox" for="{{$v.Id}}-TRUE">Accepted</label>
+                                </div>
+                            </div>
+                          </nav>
+                          {{end}}
+                        </div>
+                      </article>
+                     <!-- <div class="content"> -->
+                        <!-- <h6>This article affirms:</h6>
+                        <p><strong>This subject</strong>何でも薄暗いじめじめした所でニャーニャー泣いていた事だ</p>
+                        <p><a href="#">This reference link</a>ただ彼の掌に載せ</p>
+                        <p>この書生の掌の裏でしばらくはよい心持に坐っておったが、</p> -->
+
+                       <!-- <div class="field">
+                                <input class="is-checkradio" id="exampleRadioInline1" type="radio" name="exampleRadioInline" checked="checked">
+                                <label for="exampleRadioInline1" style="color:black;">I accept</label>
+                                <input class="is-checkradio" id="exampleRadioInline2" type="radio" name="exampleRadioInline">
+                                <label for="exampleRadioInline2" style="color:black !important;">I decline</label>
+                              </div>
+                        </div> -->
+
+                    <!-- </div>  -->
+                    
+        </div>
+        {{end}}
+        <div class="consent-submit">
+                <label for="mySubmit2" class="btn" style="cursor: pointer; font-style: italic;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Q189760_noun_84860_ccReJeanSoo_vote.svg" class="svg" title="Send your decisions collection">
+                <input id="mySubmit2" type="submit" value="" class="hidden">
+        </div> 
+        </form>
+    </div>
+
+        <!-- </form> -->
+</section>
+
+<!-- <div style="position: fixed;right:0;bottom:0;"> -->
+
+
+{{end}}
+

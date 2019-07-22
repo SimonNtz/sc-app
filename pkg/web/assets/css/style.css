@@ -1,0 +1,144 @@
+html, body {
+  font-family: 'Open Sans', serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+h1 {
+  color: white !important;
+  text-align: left;
+  font-weight: 700 !important;
+  font-size: 30px !important;
+  margin-bottom: 50px !important;
+}
+/* h2 {
+  color: #474B94;
+  font-size: 1.2em;
+} */ 
+
+
+.hero.is-success {
+  background:rgb(118, 154, 164) !important;
+}
+
+input {
+  font-weight:430 !important ;
+  font-size: 22px !important;
+
+  background: rgb(118, 154, 164) !important;
+  box-shadow: none;
+  border: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  text-align: left;
+}
+
+label {
+  font-weight: 600 !important ;
+  font-size: 24px !important;
+  color: white !important;
+  border: none !important;
+  display: auto !important;
+  text-align: left;
+  max-width: 100%;
+  width: 180px;
+  padding-top: 6px;
+  /* cursor: pointer; */
+}
+
+
+.select {
+
+  max-width: 100%!important;
+  width: 100%!important;
+  right: auto!important;
+  direction: ltr!important;
+  padding-left: 25px!important;
+  /* display: inline !important;
+  text-align: left !important;
+  font-weight: 400 !important ;
+  font-size: 18px !important; */
+  /* background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0,0 32,0 16,24" style="fill: rgb(118, 154, 164)"></polygon></svg>') ; */
+  border-color: black !important;
+  outline: none !important;
+  /* padding-top: 6px; */
+
+}
+
+.select:after {
+
+  left: 14rem !important;
+  padding-left: 0!important;
+  color:rgb(118, 154, 164) !important;
+  padding-top: 6px !important;
+
+}
+
+
+option { padding-right: 10px }
+
+textarea:focus, input:focus{
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.is-divider {
+  color: white !important;
+  border-top: 1px solid white !important;
+}
+
+.is-divider-v {
+  color: white !important;
+  border-left: 1px solid white !important;
+}
+
+.contact-submit {
+  text-align: right !important;
+}
+
+.contact-submit input {
+  font-weight: 600 !important ;
+  font-size: 24px !important;
+  color: white !important;
+  /* cursor: pointer !important;
+  position: fixed;
+  right:0;
+  bottom:0; */
+}
+
+.consent-submit input {
+  position: fixed;
+  right:0;
+  bottom:0;
+  background: none !important;
+}
+
+.buttons.has-addons:focus {
+  background-color:green !important; 
+}
+
+.label-checkbox {
+  font-weight: 300 !important ;
+  font-size: 16px !important;
+  color:black !important;
+}
+
+
+.svg {
+  fill: white ;
+	width: 10%;
+  height: auto;
+  filter: invert(1);
+  padding-right: 30px;
+  cursor: pointer !important;
+  position: fixed;
+  right:0;
+  bottom:0;
+}
+
+.svg:hover {
+	cursor: pointer;
+	filter: invert(.9) sepia(60) saturate(15) hue-rotate(10deg);
+}
+
+#bottom{position: fixed;right:0;bottom:0;}

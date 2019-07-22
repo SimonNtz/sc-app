@@ -1,0 +1,32 @@
+{  
+    "users" : [
+        {"id":"YYQQCHKLIBL6Z6WSVGGW3DX6UGOD7XSB"},
+        {"id":"YZ34X4QKBPRFA2AAJNEUF64SUFANIIDP"},
+        {"id":"YZ6UW5VLTE53WQJNV4SENSSLFP6LHH6T"},
+        {"id":"YZA45FUAXHW55ELMF5IK3QYJKSGX6LIQ"},
+        {"id":"YZKOT7N2S6JDW7PC4BNLHGRGSMBDD3QF"},
+        {"id":"YZL3FNL4FU6I6DAXDLPQUL32KPZSRYV2"},
+        {"id":"Z2W6SI3FIN4SMM7DVKP6VQ6FLMXJN2DQ"},
+        {"id":"Z3PXHHIFJ7LA6QZMEHMNNDYD42JMP7CA"},
+        {"id":"Z4B54UIPXEQM37VWRQDRLJPZOVPTAA6U"},
+        {"id":"Z4NJOWIRRU3LR2WFAYGTLYDYJVKQ4N54"},
+        {"id":"Z6AXNYSHBAN2GI4AITYZKBDOWUMYBT3Q"},
+        {"id":"Z6CI27TBAQ2DS7FPZYMXCSU64KSVKBV6"}
+    ],
+
+    "topics" : [
+        {"id":"11.test/vlist-test2?index=700"}
+    ],
+
+    "options" : {
+        "radio": true,
+        "text": false,
+        "rater": false
+    },
+
+    "prefix" : "11.test",
+    "keypriv"    :  "/home/simon/admpriv.pem",
+    "keypub"    :  "/home/simon/admpub.pem",
+
+    "chaincode" :  "11.test/smart-consent/cc/00"
+}
